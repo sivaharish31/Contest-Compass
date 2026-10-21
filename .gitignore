@@ -1,0 +1,56 @@
+# Java / Maven
+backend/target/
+*.class
+*.jar
+*.war
+*.log
+hs_err_pid*
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test
+backend/*.log
+
+# Runtime uploads
+uploads/
+backend/uploads/
+
+# Session artifacts (Playwright, screenshots, temp browser profiles)
+temp_chrome/
+qa-visual/
+
+# AI-assisted development session notes and audit artifacts — not application code
+qa-audit/
+AUTONOMOUS_REDESIGN_REPORT.md
+CONTESTRADAR_BENTO_HANDOFF.md
+CONTESTRADAR_FINAL_EXECUTION_REPORT.md
+CONTESTRADAR_FINAL_REDESIGN_REPORT.md
+CONTESTRADAR_QA_REPORT.md
+HEATMAP_SYNC_DIAGNOSIS.md
+IMPLEMENTATION_REPORT.md
+PHASE_2_3_4_COMPLETE.md
+PREMIUM_REDESIGN_REPORT.md
+REDESIGN_REPORT.md
+SESSION_SUMMARY.md
+SYNC_DIAGNOSIS.md
+SYNC_FIXES_IMPLEMENTED.md

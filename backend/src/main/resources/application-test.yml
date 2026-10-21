@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  flyway:
+    enabled: false
+
+contestradar:
+  sync:
+    interval-ms: 999999999
+    initial-delay-ms: 999999999
+  reminder:
+    check-interval-ms: 999999999
+  providers:
+    mock-enabled: false
+  http:
+    connect-timeout-ms: 1500
+    read-timeout-ms: 1500

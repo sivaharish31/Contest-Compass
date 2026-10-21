@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contest Compass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        var mode = 'system';
+        try {
+          var raw = localStorage.getItem('contestradar-appearance');
+          if (raw) {
+            var parsed = JSON.parse(raw);
+            if (parsed.mode === 'dark' || parsed.mode === 'light' || parsed.mode === 'system') mode = parsed.mode;
+          } else {
+            var legacy = localStorage.getItem('contestradar-theme');
+            if (legacy === 'light') mode = 'light';
+            else if (legacy === 'dark') mode = 'dark';
+          }
+        } catch(e) {}
+        var resolved = mode;
+        if (mode === 'system') {
+          resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', resolved);
+        if (resolved === 'dark') document.documentElement.classList.add('dark');
+        else document.documentElement.classList.remove('dark');
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
