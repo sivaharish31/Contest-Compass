@@ -68,4 +68,3 @@ contestradar:
   http:
     connect-timeout-ms: ${HTTP_CONNECT_TIMEOUT_MS:10000}
     read-timeout-ms: ${HTTP_READ_TIMEOUT_MS:30000}
-
